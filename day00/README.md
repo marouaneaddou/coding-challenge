@@ -38,4 +38,4 @@ Constraints
 
 To solve this problem, we can use a brute-force approach with a nested loop, but this method results in a time limit exceeded error for large inputs.
 
-A more efficient approach is to use a hash map to store the numbers we've already seen while iterating through the array. For each element, we check if the complement (i.e., target - current_element) exists in the hash map. If it does, we return the indices of the two numbers. This approach allows us to find the solution in O(n) time complexity. 
+A more efficient approach is to use a hash map to store the numbers we've already seen while iterating through the array. For each element, we check if the complement ( target - current_element ) exists in the hash map. If it does, we return the indices of the two numbers. This approach allows us to find the solution in O(n) time complexity. 
