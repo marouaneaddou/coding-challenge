@@ -1,1 +1,1 @@
-# daily-coding-challenge
+# Coding Challenge
