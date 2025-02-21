@@ -21,6 +21,36 @@ class Solution {
         TreeNode* invertTree1(TreeNode* root); 
 };
     // first code
+// TreeNode* Solution::invertTree1(TreeNode* root) {
+//     if ( root == nullptr ) return nullptr;
+//     std::queue< TreeNode *> q;
+//     q.push( root );
+//     int size;
+//     while ( !q.empty() ) {
+//         size = q.size();
+//         for ( int i = 0; i < size; i++ ) {
+//             TreeNode* tmp = q.front();
+//             q.pop();
+//             if ( tmp->left != nullptr && tmp->right != nullptr ) {
+//                 TreeNode* tmp1 = tmp->left;
+//                 tmp->left = tmp->right;
+//                 tmp->right = tmp1;
+//             }
+//             else if ( tmp->left != nullptr && tmp->right == nullptr ) {
+//                 tmp->right = tmp->left;
+//                 tmp->left = nullptr;
+//             }
+//             else if ( tmp->right != nullptr && tmp->left == nullptr ) {
+//                 tmp->left = tmp->right;
+//                 tmp->right = nullptr;
+//             }
+//             if ( tmp->left != nullptr ) q.push( tmp->left );
+//             if ( tmp->right != nullptr ) q.push( tmp->right );
+//         }
+//     }
+//     return root;
+// }
+    //Optimized code 
 TreeNode* Solution::invertTree1(TreeNode* root) {
     if ( root == nullptr ) return nullptr;
     std::queue< TreeNode *> q;
@@ -31,19 +61,9 @@ TreeNode* Solution::invertTree1(TreeNode* root) {
         for ( int i = 0; i < size; i++ ) {
             TreeNode* tmp = q.front();
             q.pop();
-            if ( tmp->left != nullptr && tmp->right != nullptr ) {
-                TreeNode* tmp1 = tmp->left;
-                tmp->left = tmp->right;
-                tmp->right = tmp1;
-            }
-            else if ( tmp->left != nullptr && tmp->right == nullptr ) {
-                tmp->right = tmp->left;
-                tmp->left = nullptr;
-            }
-            else if ( tmp->right != nullptr && tmp->left == nullptr ) {
-                tmp->left = tmp->right;
-                tmp->right = nullptr;
-            }
+            TreeNode* tmp1 = tmp->left;
+            tmp->left = tmp->right;
+            tmp->right = tmp1;
             if ( tmp->left != nullptr ) q.push( tmp->left );
             if ( tmp->right != nullptr ) q.push( tmp->right );
         }

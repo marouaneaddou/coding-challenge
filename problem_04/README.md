@@ -4,6 +4,7 @@
 Given the `root` of a binary tree, invert the tree, and return its root.
 
 Example 1:
+
 ![image](https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg)
 
 
@@ -11,6 +12,7 @@ Example 1:
     Output: [4,7,2,9,6,3,1]
 
 Example 2:
+
 ![image](https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg)
 
     Input: root = [2,1,3]
