@@ -19,7 +19,6 @@ class Solution {
     public:
         TreeNode* invertTree(TreeNode* root); 
         TreeNode* invertTree1(TreeNode* root); 
-        TreeNode* invertTree2(TreeNode* root); 
 };
     // first code
 // TreeNode* Solution::invertTree1(TreeNode* root) {
