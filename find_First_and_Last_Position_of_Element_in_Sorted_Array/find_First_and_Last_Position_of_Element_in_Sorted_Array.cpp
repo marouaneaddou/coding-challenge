@@ -7,7 +7,6 @@ using namespace std;
 
 class Solution {
 public:
-    std::vector<int> ans;
     int search( vector<int>& nums, int target, char c ) {
         int start = 0, end = nums.size() - 1, mid;
         int pos = -1;
