@@ -43,9 +43,9 @@ Example 3:
 
 Example 3:
 
-    Input: n = 3
+    Input: n = 5
 
-    Output: "21"
+    Output: "111221"
 
 Example 4:
 
